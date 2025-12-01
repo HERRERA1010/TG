@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOAT</title>
+    <title>CardRealm - Tienda de Trading Card Games</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0c0c0c;
             --light: #ffffff;
             --accent: #a52019;
         }
-
+        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: var(--primary);
@@ -27,91 +25,51 @@
             font-size: 16px;
             line-height: 1.6;
         }
-
+        
         /* Optimal typography hierarchy for UX/UI */
-        h1 {
-            font-size: 2.5rem !important;
-            font-weight: 800 !important;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2rem !important;
-            font-weight: 700 !important;
-            line-height: 1.3;
-        }
-
-        h3 {
-            font-size: 1.75rem !important;
-            font-weight: 600 !important;
-            line-height: 1.3;
-        }
-
-        h4 {
-            font-size: 1.5rem !important;
-            font-weight: 600 !important;
-            line-height: 1.4;
-        }
-
-        h5 {
-            font-size: 1.25rem !important;
-            font-weight: 600 !important;
-            line-height: 1.4;
-        }
-
-        h6 {
-            font-size: 1.1rem !important;
-            font-weight: 600 !important;
-            line-height: 1.4;
-        }
-
-        .lead {
-            font-size: 1.125rem !important;
-            font-weight: 400 !important;
-            line-height: 1.6;
-        }
-
-        p,
-        .card-text {
-            font-size: 1rem !important;
-            font-weight: 400 !important;
-            line-height: 1.6;
-        }
-
+        h1 { font-size: 2.5rem !important; font-weight: 800 !important; line-height: 1.2; }
+        h2 { font-size: 2rem !important; font-weight: 700 !important; line-height: 1.3; }
+        h3 { font-size: 1.75rem !important; font-weight: 600 !important; line-height: 1.3; }
+        h4 { font-size: 1.5rem !important; font-weight: 600 !important; line-height: 1.4; }
+        h5 { font-size: 1.25rem !important; font-weight: 600 !important; line-height: 1.4; }
+        h6 { font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1.4; }
+        .lead { font-size: 1.125rem !important; font-weight: 400 !important; line-height: 1.6; }
+        p, .card-text { font-size: 1rem !important; font-weight: 400 !important; line-height: 1.6; }
+        
         .navbar {
             background-color: var(--primary);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
-
+        
         .navbar-brand {
             font-weight: 800;
             font-size: 1.875rem;
             color: var(--light) !important;
             letter-spacing: -0.02em;
         }
-
+        
         .navbar-brand span {
             color: var(--accent);
         }
-
+        
         .nav-link {
-            color: rgba(255, 255, 255, 0.8) !important;
+            color: rgba(255,255,255,0.8) !important;
             margin-left: 25px;
             font-weight: 500;
             transition: color 0.3s ease;
             font-size: 1rem !important;
             letter-spacing: -0.01em;
         }
-
+        
         .nav-link:hover {
             color: var(--accent) !important;
         }
-
+        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.95)), url('https://placehold.co/1920x1080/222222/ffffff?text=Trading+Cards') no-repeat center center;
@@ -126,25 +84,25 @@
             justify-content: center;
             text-align: center;
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .section-padding {
             padding: 100px 0;
         }
-
+        
         .section-title {
             position: relative;
             margin-bottom: 60px;
             text-align: center;
             color: var(--light);
         }
-
+        
         .section-title::after {
             content: '';
             position: absolute;
@@ -156,67 +114,67 @@
             background: var(--accent);
             border-radius: 2px;
         }
-
+        
         .card-hover {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255,255,255,0.1);
             background: var(--primary);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
-
+        
         .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(165, 32, 25, 0.4), 0 10px 10px -5px rgba(165, 32, 25, 0.2);
             border-color: var(--accent);
         }
-
+        
         .product-card {
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 30px;
         }
-
+        
         .product-image {
             height: 280px;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-
+        
         .card-hover:hover .product-image {
             transform: scale(1.05);
         }
-
+        
         .youtube-section {
             background: var(--primary);
             position: relative;
         }
-
+        
         .event-card {
             border-left: 4px solid var(--accent);
             border-radius: 0 12px 12px 0;
             background: var(--primary);
             transition: all 0.3s ease;
         }
-
+        
         .event-card:hover {
             background: rgba(165, 32, 25, 0.15);
             transform: translateX(5px);
         }
-
+        
         .footer {
             background: var(--primary);
             color: var(--light);
             padding: 80px 0 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
-
+        
         .footer h5 {
             color: var(--light);
             margin-bottom: 25px;
             position: relative;
         }
-
+        
         .footer h5::after {
             content: '';
             position: absolute;
@@ -226,7 +184,7 @@
             height: 3px;
             background: var(--accent);
         }
-
+        
         .social-icons a {
             display: inline-flex;
             align-items: center;
@@ -234,18 +192,29 @@
             width: 45px;
             height: 45px;
             background: var(--light);
-            color: var(--primary);
+            color: var(--accent) !important;
             border-radius: 50%;
             margin-right: 12px;
             transition: all 0.3s ease;
+            border: 2px solid var(--accent);
         }
-
+        
         .social-icons a:hover {
             background: var(--accent);
-            color: var(--light);
+            color: var(--light) !important;
             transform: translateY(-5px) rotate(10deg);
+            border-color: var(--accent);
         }
-
+        
+        .social-icons i {
+            color: var(--accent) !important;
+            font-size: 18px;
+        }
+        
+        .social-icons a:hover i {
+            color: var(--light) !important;
+        }
+        
         .btn-accent {
             background: var(--accent);
             color: var(--light);
@@ -261,13 +230,13 @@
             font-weight: 700;
             letter-spacing: 0.05em;
         }
-
+        
         .btn-accent:hover {
             background: #8a1a14;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(165, 32, 25, 0.4);
         }
-
+        
         /* Demon animation */
         .demon-character {
             position: fixed;
@@ -279,17 +248,17 @@
             opacity: 0;
             transition: all 0.5s ease;
         }
-
+        
         .demon-character.show {
             opacity: 1;
             right: 20px;
         }
-
+        
         .demon-character.hide {
             opacity: 0;
             right: -100px;
         }
-
+        
         .demon-greeting {
             position: absolute;
             top: -40px;
@@ -307,11 +276,11 @@
             font-size: 0.875rem !important;
             letter-spacing: -0.01em;
         }
-
+        
         .demon-greeting.show {
             opacity: 1;
         }
-
+        
         /* Price styling - WHITE TEXT */
         .product-price {
             color: var(--light);
@@ -320,34 +289,21 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
             letter-spacing: -0.02em;
         }
-
+        
         /* Contact icons - only icons remain red, text is white */
         .contact-icon {
             color: var(--accent) !important;
         }
-
+        
         /* All text elements are white */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        span,
-        a,
-        li,
-        .card-title,
-        .card-text,
-        .text-muted,
-        .lead {
+        h1, h2, h3, h4, h5, h6, p, span, a, li, .card-title, .card-text, .text-muted, .lead {
             color: var(--light) !important;
         }
-
+        
         .text-muted {
-            color: rgba(255, 255, 255, 0.6) !important;
+            color: rgba(255,255,255,0.6) !important;
         }
-
+        
         /* Card title styling */
         .card-title {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
@@ -356,81 +312,58 @@
             line-height: 1.3;
             margin-bottom: 0.5rem;
         }
-
+        
         /* Responsive adjustments */
         @media (max-width: 992px) {
             .navbar-nav {
                 margin-top: 15px;
             }
-
+            
             .nav-link {
                 margin-left: 0;
                 margin-right: 20px;
                 font-size: 0.95rem !important;
             }
-
+            
             .hero-section {
                 padding: 140px 0 80px;
                 min-height: auto;
             }
-
-            h1 {
-                font-size: 2.125rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
+            
+            h1 { font-size: 2.125rem !important; }
+            h2 { font-size: 1.75rem !important; }
         }
-
+        
         @media (max-width: 768px) {
             .section-padding {
                 padding: 70px 0;
             }
-
+            
             .product-card .card-title {
                 font-size: 1.125rem !important;
             }
-
-            h1 {
-                font-size: 1.875rem !important;
-            }
-
-            h2 {
-                font-size: 1.5rem !important;
-            }
-
-            .product-price {
-                font-size: 1.125rem !important;
-            }
-
+            
+            h1 { font-size: 1.875rem !important; }
+            h2 { font-size: 1.5rem !important; }
+            .product-price { font-size: 1.125rem !important; }
+            
             .btn-accent {
                 padding: 10px 24px;
                 font-size: 0.875rem !important;
             }
         }
-
+        
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.625rem !important;
-            }
-
-            h2 {
-                font-size: 1.375rem !important;
-            }
-
-            .lead {
-                font-size: 1rem !important;
-            }
-
+            h1 { font-size: 1.625rem !important; }
+            h2 { font-size: 1.375rem !important; }
+            .lead { font-size: 1rem !important; }
             .section-title {
                 font-size: 1.5rem !important;
             }
         }
-
+        
         /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
-
             .card-hover,
             .event-card,
             .social-icons a,
@@ -438,7 +371,7 @@
                 transition: none !important;
                 transform: none !important;
             }
-
+            
             .demon-character,
             .demon-greeting {
                 transition: opacity 0.3s ease !important;
@@ -447,14 +380,12 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">Card<span style="color: var(--accent);">Realm</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -477,10 +408,8 @@
     <section class="hero-section" id="hero">
         <div class="container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="display-4 fw-bold mb-4">Bienvenido a <span style="color: var(--accent);">CardRealm</span>
-                </h1>
-                <p class="lead mb-0">Tu destino definitivo para Magic: The Gathering, Pokémon, Sorcery y más Trading
-                    Card Games</p>
+                <h1 class="display-4 fw-bold mb-4">Bienvenido a <span style="color: var(--accent);">CardRealm</span></h1>
+                <p class="lead mb-0">Tu destino definitivo para Magic: The Gathering, Pokémon, Sorcery y más Trading Card Games</p>
             </div>
         </div>
     </section>
@@ -497,13 +426,8 @@
             <h2 class="section-title" data-aos="fade-up" data-aos-duration="800">Sobre CardRealm</h2>
             <div class="row">
                 <div class="col-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <p class="lead text-center">En CardRealm, nos apasionan los Trading Card Games. Somos una tienda
-                        especializada dedicada a ofrecer la mejor experiencia para coleccionistas y jugadores de Magic:
-                        The Gathering, Pokémon TCG, Sorcery: Contested Realm y Wonders of the Multiverse.</p>
-                    <p class="lead text-center mt-3">Contamos con un amplio inventario de productos nuevos y usados,
-                        cartas individuales, sobres, cajas de refuerzo, accesorios y mucho más. Nuestro equipo está
-                        compuesto por jugadores experimentados que están siempre dispuestos a ayudarte a encontrar
-                        exactamente lo que necesitas.</p>
+                    <p class="lead text-center">En CardRealm, nos apasionan los Trading Card Games. Somos una tienda especializada dedicada a ofrecer la mejor experiencia para coleccionistas y jugadores de Magic: The Gathering, Pokémon TCG, Sorcery: Contested Realm y Wonders of the Multiverse.</p>
+                    <p class="lead text-center mt-3">Contamos con un amplio inventario de productos nuevos y usados, cartas individuales, sobres, cajas de refuerzo, accesorios y mucho más. Nuestro equipo está compuesto por jugadores experimentados que están siempre dispuestos a ayudarte a encontrar exactamente lo que necesitas.</p>
                 </div>
             </div>
         </div>
@@ -515,17 +439,12 @@
             <div class="row align-items-center">
                 <div class="col-12 text-center mb-4" data-aos="fade-up" data-aos-duration="800">
                     <h2 class="section-title">Canal de YouTube</h2>
-                    <p class="lead">¡Sigue nuestro canal de YouTube para obtener los últimos lanzamientos, reseñas de
-                        productos, tutoriales de juego y cobertura de eventos!</p>
-                    <a href="https://youtube.com" class="btn btn-accent" data-aos="zoom-in"
-                        data-aos-delay="300">SUSCRÍBETE AL CANAL</a>
+                    <p class="lead">¡Sigue nuestro canal de YouTube para obtener los últimos lanzamientos, reseñas de productos, tutoriales de juego y cobertura de eventos!</p>
+                    <a href="https://youtube.com" class="btn btn-accent" data-aos="zoom-in" data-aos-delay="300">SUSCRÍBETE AL CANAL</a>
                 </div>
                 <div class="col-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -539,8 +458,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="card card-hover product-card">
-                        <img src="https://placehold.co/300x400/ffffff/000000?text=MTG+Box"
-                            class="card-img-top product-image" alt="Magic: The Gathering">
+                        <img src="https://placehold.co/300x400/ffffff/000000?text=MTG+Box" class="card-img-top product-image" alt="Magic: The Gathering">
                         <div class="card-body text-center">
                             <h5 class="card-title">Magic: The Gathering<br>Booster Box</h5>
                             <p class="card-text">Caja completa de sobres</p>
@@ -553,8 +471,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="card card-hover product-card">
-                        <img src="https://placehold.co/300x400/ffffff/000000?text=Pokemon+ETB"
-                            class="card-img-top product-image" alt="Pokémon">
+                        <img src="https://placehold.co/300x400/ffffff/000000?text=Pokemon+ETB" class="card-img-top product-image" alt="Pokémon">
                         <div class="card-body text-center">
                             <h5 class="card-title">Pokémon<br>Elite Trainer Box</h5>
                             <p class="card-text">Edición especial completa</p>
@@ -567,8 +484,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="card card-hover product-card">
-                        <img src="https://placehold.co/300x400/ffffff/000000?text=Sorcery+Deck"
-                            class="card-img-top product-image" alt="Sorcery">
+                        <img src="https://placehold.co/300x400/ffffff/000000?text=Sorcery+Deck" class="card-img-top product-image" alt="Sorcery">
                         <div class="card-body text-center">
                             <h5 class="card-title">Sorcery<br>Starter Deck</h5>
                             <p class="card-text">Mazo inicial completo</p>
@@ -581,8 +497,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="card card-hover product-card">
-                        <img src="https://placehold.co/300x400/ffffff/000000?text=Wonders+Deck"
-                            class="card-img-top product-image" alt="Wonders">
+                        <img src="https://placehold.co/300x400/ffffff/000000?text=Wonders+Deck" class="card-img-top product-image" alt="Wonders">
                         <div class="card-body text-center">
                             <h5 class="card-title">Wonders of the First<br>Collector's Pack</h5>
                             <p class="card-text">Edición coleccionista</p>
@@ -606,18 +521,15 @@
                     <div class="card card-hover event-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <div class="rounded-circle p-2 me-3"
-                                    style="background: var(--accent)!important; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                <div class="rounded-circle p-2 me-3" style="background: var(--accent)!important; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
                                     <i class="fas fa-trophy" style="color: var(--light);"></i>
                                 </div>
                                 <div>
                                     <h5 class="card-title mb-0">Torneo de Magic: The Gathering</h5>
-                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> Sábado, 6 de
-                                        Diciembre, 2025</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> Sábado, 6 de Diciembre, 2025</small>
                                 </div>
                             </div>
-                            <p class="card-text">Competición de formato Standard con premios en cartas y productos
-                                exclusivos.</p>
+                            <p class="card-text">Competición de formato Standard con premios en cartas y productos exclusivos.</p>
                         </div>
                     </div>
                 </div>
@@ -625,18 +537,15 @@
                     <div class="card card-hover event-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <div class="rounded-circle p-2 me-3"
-                                    style="background: var(--accent)!important; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                <div class="rounded-circle p-2 me-3" style="background: var(--accent)!important; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
                                     <i class="fas fa-users" style="color: var(--light);"></i>
                                 </div>
                                 <div>
                                     <h5 class="card-title mb-0">Draft Party Pokémon</h5>
-                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> Domingo, 14 de
-                                        Diciembre, 2025</small>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i> Domingo, 14 de Diciembre, 2025</small>
                                 </div>
                             </div>
-                            <p class="card-text">Evento casual de draft para jugadores de todos los niveles. ¡Trae tus
-                                sobres!</p>
+                            <p class="card-text">Evento casual de draft para jugadores de todos los niveles. ¡Trae tus sobres!</p>
                         </div>
                     </div>
                 </div>
@@ -650,8 +559,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="800">
                     <h5>CardRealm</h5>
-                    <p>Tu tienda de confianza para todos tus Trading Card Games favoritos. Calidad, variedad y pasión
-                        por el hobby.</p>
+                    <p>Tu tienda de confianza para todos tus Trading Card Games favoritos. Calidad, variedad y pasión por el hobby.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -662,12 +570,10 @@
                 <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h5>Contacto</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 contact-icon"></i> Av. Trading Cards 123,
-                            Ciudad Gaming</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 contact-icon"></i> Av. Trading Cards 123, Ciudad Gaming</li>
                         <li class="mb-2"><i class="fas fa-phone me-2 contact-icon"></i> +56 9 1234 5678</li>
                         <li class="mb-2"><i class="fas fa-envelope me-2 contact-icon"></i> info@cardrealm.cl</li>
-                        <li class="mb-2"><i class="fas fa-clock me-2 contact-icon"></i> Lunes a Sábado: 10:00 - 20:00
-                        </li>
+                        <li class="mb-2"><i class="fas fa-clock me-2 contact-icon"></i> Lunes a Sábado: 10:00 - 20:00</li>
                     </ul>
                 </div>
                 <div class="col-lg-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
@@ -684,8 +590,7 @@
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <p class="mb-0">&copy; 2025 CardRealm. Todos los derechos reservados.<br>
-                        <small>Creado por <strong>CD/PROJECT/WEB</strong></small>
-                    </p>
+                    <small>Creado por <strong>CD/PROJECT/WEB</strong></small></p>
                 </div>
             </div>
         </div>
@@ -702,23 +607,23 @@
         });
 
         // Demon character animation
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const demon = document.getElementById('demonCharacter');
             const greeting = document.getElementById('demonGreeting');
-
+            
             // Wait for page to load completely
             setTimeout(() => {
                 // Show demon entering from right to left
                 demon.classList.add('show');
-
+                
                 // Show greeting after demon appears
                 setTimeout(() => {
                     greeting.classList.add('show');
-
+                    
                     // Hide greeting and demon after delay
                     setTimeout(() => {
                         greeting.classList.remove('show');
-
+                        
                         setTimeout(() => {
                             // Hide demon by moving it back to the right (left to right exit)
                             demon.classList.add('hide');
@@ -729,5 +634,5 @@
         });
     </script>
 </body>
-
 </html>
+
